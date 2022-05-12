@@ -6,7 +6,6 @@ import VolumeUp from '../../assets/images/Icons/volume_up.svg';
 
 
 const VideoPlayer = (props) => {
-    const {duration} = props.videoPlayer;
   
     return (
       <div className='player'>
@@ -20,7 +19,7 @@ const VideoPlayer = (props) => {
         </div>
         <div className='player__control player__control--progress'>
           <progress value='0' max='100'></progress>
-          <p className='player__time'>{ `0:00 / ${duration === '' ? '0:00' : duration}` }</p>
+          <p className='player__time'>{ `0:00 / ${props.videoPlayer.duration}` }</p>
         </div>
         <div className='player__control player__control--fsvol'>
           <img
