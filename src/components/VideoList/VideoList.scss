@@ -1,0 +1,23 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.videos {
+    @include flex($flex-direction: column, $box-sizing: border-box);
+    width: 100%;
+  
+    @include desktop {
+      border-left: 2px solid $divider-line;
+    }
+  
+    &__next {
+      @include font-styling(200, $secondary-text);
+      @include format-text(1.375rem, 2.5rem 0, 0.875rem);
+      text-transform: uppercase;
+  
+      @include desktop {
+        padding: 0 0 0 1.5rem;
+      }
+    }
+  }
