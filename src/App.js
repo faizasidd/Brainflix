@@ -13,7 +13,7 @@ class App extends React.Component {
 constructor() {
   super();
 
-  this.state = {videoPlayer: MainVideo[0],title: MainVideo,channel:MainVideo,description:MainVideo,views:MainVideo,likes:MainVideo,timestamp:MainVideo,comments:MainVideo};
+  this.state = {videoPlayer: MainVideo[0],title: MainVideo,channel:MainVideo,description:MainVideo,views:MainVideo,likes:MainVideo,timestamp:MainVideo,comments:MainVideo,name:MainVideo,timestamp:MainVideo,comment:MainVideo};
 
   // const newDate = new Date.timestamp;
   // const month = newDate.getMonth() + 1;
@@ -32,7 +32,8 @@ constructor() {
         <div className='App__left'>
           <VideoInfo videoPlayer = {this.state.videoPlayer}/>
            <Comments videoPlayer={this.state.videoPlayer} /> 
-        </div>
+           </div>
+   
       </div>
   </div>
   </>
