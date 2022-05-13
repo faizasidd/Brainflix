@@ -14,15 +14,38 @@ class App extends React.Component {
 constructor() {
   super();
 
-  this.state = {videoPlayer: MainVideo[0],title: MainVideo,channel:MainVideo,description:MainVideo,views:MainVideo,likes:MainVideo,timestamp:MainVideo,comments:MainVideo,name:MainVideo,timestamp:MainVideo,comment:MainVideo,
-  sideVideo:NextVideo[1],title:NextVideo,channel:NextVideo,image:NextVideo};
+  this.state = {videoPlayer: MainVideo[0],
+  sideVideo:NextVideo};
 
-  // const newDate = new Date.timestamp;
+ // const date = time => {
+  // const newDate = new Date(time);
   // const month = newDate.getMonth() + 1;
   // const day = newDate.getDate();
   // const year = newDate.getFullYear();
-  // const date = {'${month} / ${day} / ${year}'};
+  // const date = {'${month} / ${day} / ${year}'}
+//   return date;
+// };
 
+
+}
+// clickHandler = (selectedvideo) => {
+//   console.log(selectedvideo)
+//   // let newVideoList = NextVideo.filter(video => video.id !== id);
+//   // // newVideoList.push(this.state.Maideo);
+
+//   // this.setState({
+//   //     sideVideo: newVideoList, 
+//   //      videoPlayer: {id: id, channel: channel, title: id.title, image: id.image, description: id.description},
+//   //  });
+
+clickHandler = (e) => {
+  let newVideoList = this.state.sideVideo.filter(video => video.id !== e.id);
+  //newVideoList.push(this.state.videoPlayer);
+
+  this.setState({
+      sideVideo: newVideoList, 
+       videoPlayer: {id: e.id, channel: e.channel, title: e.title, image: e.image, description: e.description, likes: e.likes, views: e.views, duration: e.duration, timestamp: e.timestamp},
+   });
 }
   render() {
   return (
@@ -35,7 +58,7 @@ constructor() {
           <VideoInfo videoPlayer = {this.state.videoPlayer}/>
            <Comments videoPlayer = {this.state.videoPlayer} /> 
            </div>
-       <VideoList sideVideo = {this.state.sideVideo} />
+       <VideoList sideVideo = {this.state.sideVideo} clickHandler={this.clickHandler} />
       </div>
   </div>
   </>

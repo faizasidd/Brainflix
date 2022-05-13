@@ -2,6 +2,7 @@ import React from 'react';
 import './VideoInfo.scss';
 import LikesIcon from '../../assets/images/Icons/likes.svg';
 import ViewsIcon from '../../assets/images/Icons/views.svg';
+import date from '../Helper/Helper';
 
 // The info component displaying title, description, likes, etc for the selected video
 
@@ -14,7 +15,7 @@ const VideoInfo = (props) => {
   
         <div className='video-info__second-row'>
           <h3 className='video-info__channel'>{`By ${props.videoPlayer.channel}`}</h3>
-          <p className='video-info__timestamp'>{props.videoPlayer.timestamp}</p>
+          <p className='video-info__timestamp'>{date(props.videoPlayer.timestamp)}</p>
         </div>
   
         <div className='video-info__third-row'>

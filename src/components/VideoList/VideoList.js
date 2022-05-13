@@ -7,17 +7,25 @@ import VideoListItem from '../VideoListItem/VideoListItem';
 
 const VideoList = (props) => {
 
-  const videos = props.sideVideo.videos
+  const videos = props.sideVideo
+ 
   return (
     <div className='videos'>
       <h3 className='videos__next'>Next videos</h3>
       {
-        props.sideVideo.videos.map(video => 
-        <VideoListItem key = {video.id}
+        props.sideVideo.map(video => 
+        <VideoListItem clickHandler = {props.clickHandler}
+        key = {video.id}
+        id = {video.id}
         title = {video.title}
         channel = {video.channel}
         image = {video.image}
-        />)
+        description = {video.description}
+        likes = {video.likes}
+        views = {video.views}
+        duration = {video.duration}
+
+        />) 
     }
     </div>
   )
