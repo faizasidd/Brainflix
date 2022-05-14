@@ -11,20 +11,14 @@ const VideoList = (props) => {
  
   return (
     <div className='videos'>
-      <h3 className='videos__next'>Next videos</h3>
+      <h2 className='videos__next'>Next videos</h2>
       {
-        props.sideVideo.map(video => 
-        <VideoListItem clickHandler = {props.clickHandler}
-        key = {video.id}
-        id = {video.id}
+        props.sideVideo.filter(video => video.id !== props.id).map(video =>
+        <VideoListItem key={video.id}
+        onClick={ () => {props.clickHandler(video.id)}}
+        image = {video.image}
         title = {video.title}
         channel = {video.channel}
-        image = {video.image}
-        description = {video.description}
-        likes = {video.likes}
-        views = {video.views}
-        duration = {video.duration}
-
         />) 
     }
     </div>

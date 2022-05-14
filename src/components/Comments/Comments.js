@@ -15,7 +15,7 @@ const Comments = (props) => {
     <CommentForm />
     {
         props.videoPlayer.comments.map(comment => 
-        <CommentItem key={comment.id}
+        <CommentItem key={comment.name}
         id = {comment.id}
         name = {comment.name}
         timestamp = {comment.timestamp}
