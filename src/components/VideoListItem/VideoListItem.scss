@@ -27,7 +27,7 @@
     }
   
     &__title {
-      @include font-styling(200, $primary-text);
+      @include font-styling(600, $primary-text);
       @include format-text(1.375rem, 0 0 .25rem 0, 0.8125rem);
       width: 100%;
   
@@ -42,7 +42,7 @@
     }
   
     &__channel {
-      @include font-styling(100, $primary-text);
+      @include font-styling(400, $primary-text);
       @include format-text($lh: 1.125rem, $fs: 0.8125rem);
       width: 100%;
   

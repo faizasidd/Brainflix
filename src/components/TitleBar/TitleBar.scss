@@ -95,7 +95,7 @@
 
   .btn {
     font-family: inherit;
-    @include font-styling(200, $secondary-background);
+    @include font-styling(600, $secondary-background);
     @include format-text($lh: 0.875rem, $fs: 0.875rem);
     background-color: $primary-cta;
     border: none;
@@ -111,17 +111,29 @@
       flex-grow: 1;
       margin: 1rem 0 1.5rem 4.125rem;
       width: calc(100% - 4.125rem);
+
+      & :first-child {
+        margin: 0 4rem -0.5rem 0;
+      }
   
       @include tablet {
         flex-grow: 0;
         width: 9.6875rem;
         margin: 0 2.5rem 1.5rem 1rem;
+
+        & :first-child {
+          margin: 0 2rem -0.5rem 0;
+        }
       }
   
       @include desktop {
         flex-grow: 0;
         width: 9.6875rem;
         margin: 0 2rem 1.5rem 1rem;
+
+        & :first-child {
+          margin: 0 2rem -0.5rem 0;
+        }
       }
     }
   
@@ -132,9 +144,8 @@
       width: calc(100% - 4rem);
   
       & :first-child {
-        margin: 0 .75rem 4px 0;
-        width: 15px;
-        height: 15px;
+        margin: 0 4rem 4px 0;
+
       }
   
       @include tablet {
