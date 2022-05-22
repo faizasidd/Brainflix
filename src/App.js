@@ -9,6 +9,9 @@ import './App.scss';
 import MainVideo from './data/video-details.json';
 import NextVideo from './data/videos.json';
 
+// const API_KEY = 'e7877112-7863-4b0d-93aa-5fb567cfa0f4';
+// const API_URL = 'https://project-2-api.herokuapp.com';
+
 class App extends React.Component {
 
 constructor() {
