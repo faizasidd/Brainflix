@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
 import './UploadPage.scss';
-import Thumbnail from '../assets/images/Upload-video-preview.jpg';
+import Thumbnail from '../../assets/images/Upload-video-preview.jpg';
 
 class UploadPage extends Component {
   render() {
@@ -13,7 +13,7 @@ class UploadPage extends Component {
           <img
             className='upload__thumbnail'
             src={Thumbnail}
-            alt='The video thumbnail'
+            alt='bike handle'
           />
         </div>
         <form className='upload__form'>

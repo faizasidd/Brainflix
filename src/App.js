@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import  { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TitleBar from './components/TitleBar/TitleBar';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoInfo from './components/VideoInfo/VideoInfo';
@@ -9,7 +10,10 @@ import './App.scss';
 import MainVideo from './data/video-details.json';
 import NextVideo from './data/videos.json';
 
-class App extends React.Component {
+import UploadPage from './pages/Page/UploadPage';
+import HomePage from './pages/Page/HomePage';
+
+class App extends Component {
 
 constructor() {
   super();
@@ -25,11 +29,13 @@ clickHandler = (id) => {
 }
   
 render() {
-console.log(this.state.videoPlayer)
   return (
     <>
    <div className="App">
+   <BrowserRouter>
       <TitleBar image={Mohan} /> 
+      <Switch>
+        <Route path='/upload' component={UploadPage} />
       <VideoPlayer videoPlayer = {this.state.videoPlayer} />
       <div className='App__container'>
         <div className='App__left'>
@@ -38,6 +44,8 @@ console.log(this.state.videoPlayer)
            </div>
        <VideoList sideVideo = {this.state.sideVideo} clickHandler={this.clickHandler} id = {this.state.videoPlayer.id} />
       </div>
+      </Switch>
+      </BrowserRouter>
   </div>
   </>
   );
