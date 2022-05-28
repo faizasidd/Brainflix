@@ -4,6 +4,7 @@ import './UploadPage.scss';
 import Thumbnail from '../../assets/images/Upload-video-preview.jpg';
 
 class UploadPage extends Component {
+  
   render() {
     return (
       <div className='upload'>
