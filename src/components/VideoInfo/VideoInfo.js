@@ -7,6 +7,7 @@ import date from '../Helper/Helper';
 // The info component displaying title, description, likes, etc for the selected video
 
 class VideoInfo extends Component {
+  
   render() {
     const {
       title,

@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './CommentForm.scss';
 import Mohan from '../../assets/images/Mohan-muruge.jpg'
 import CommentIcon from '../../assets/images/Icons/add_comment.svg';
 
 // The form for submitting comments
 
-const CommentForm = (props) => {
+class CommentForm extends Component {
+
+  render () {
   return (
-    <form className='com-form' onSubmit={event => props.handleSubmit(event)}>
+    <form className='com-form' onSubmit={event => this.props.handleSubmit(event)}>
       <label className='com-form__label'>Join the conversation</label>
       <img
         className='com-form__img'
@@ -15,7 +17,7 @@ const CommentForm = (props) => {
         alt={'The user\'s profile'}
       />
       <textarea
-        className='com-form__comment'
+        className='text-input text-input--comment'
         name='comment'
         placeholder='Add a new comment'
         required
@@ -26,6 +28,7 @@ const CommentForm = (props) => {
       </button>
     </form>
   );
+}
 }
 
 export default CommentForm;
