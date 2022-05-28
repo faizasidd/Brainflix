@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './UploadPage.scss';
 import Thumbnail from '../../assets/images/Upload-video-preview.jpg';
 
@@ -33,7 +33,7 @@ class UploadPage extends Component {
         </form>
         <div className='upload__button-container'>
           <button className='btn btn--publish'>Publish</button>
-          {/* <Link className='upload__cancel' to='/videos'>Cancel</Link> */}
+          <Link className='upload__cancel' to='/videos'>Cancel</Link>
         </div>
       </div>
     )

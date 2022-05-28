@@ -35,15 +35,9 @@ render() {
    <BrowserRouter>
       <TitleBar image={Mohan} /> 
       <Switch>
+        <Route exact path={['/videos', '/']} component={HomePage} />
         <Route path='/upload' component={UploadPage} />
-      <VideoPlayer videoPlayer = {this.state.videoPlayer} />
-      <div className='App__container'>
-        <div className='App__left'>
-          <VideoInfo videoPlayer = {this.state.videoPlayer}/>
-           <Comments videoPlayer = {this.state.videoPlayer} /> 
-           </div>
-       <VideoList sideVideo = {this.state.sideVideo} clickHandler={this.clickHandler} id = {this.state.videoPlayer.id} />
-      </div>
+        <Route path='/videos/:id' component={HomePage} />
       </Switch>
       </BrowserRouter>
   </div>
