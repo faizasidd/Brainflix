@@ -5,8 +5,6 @@ import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import VideoList from '../../components/VideoList/VideoList';
 import Comments from '../../components/Comments/Comments';
 import './HomePage.scss';
-// import MainVideo from '../data/video-details.json';
-// import NextVideo from '../data/videos.json';
 
 const API_KEY = '189efc79-8553-4491-a110-7623ce65d4f6';
 const API_URL = 'https://project-2-api.herokuapp.com';
@@ -77,7 +75,6 @@ class HomePage extends Component {
                 <VideoInfo video={selected}/>
                 <Comments
                   comments={comments.sort((a,b) => b.timestamp - a.timestamp)}
-                  handleSubmit={this.handleSubmit}
                 />
               </div>
               <VideoList videos={videos.filter(video => video.id !== selected.id)}/>

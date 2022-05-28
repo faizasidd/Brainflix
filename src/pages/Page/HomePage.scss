@@ -1,0 +1,29 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.home {
+    @include flex($justify-content: center, $flex-wrap: wrap);
+    width: 100vw;
+  
+    &__container {
+      @include flex($flex-direction: column, $justify-content: center);
+      padding: 0 1rem;
+  
+      @include tablet {
+        padding: 0 1.5rem;
+      }
+  
+      @include desktop {
+        padding: 0 5rem;
+        flex-direction: row;
+      }
+    }
+  
+    &__left {
+      @include desktop {
+        max-width: 44.5rem;
+      }
+    }
+  }
