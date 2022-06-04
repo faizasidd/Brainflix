@@ -10,11 +10,10 @@ class Comments extends Component {
   render() {
 
     const {comments} = this.props;
-    const count = comments.length
 
-  return(
+  return (
     <div className='comments'>
-    <h3 className='comments__count'>{count} Comments</h3>
+    <h3 className='comments__count'>{comments.length} Comments</h3>
     <CommentForm />
     {
         comments.map(comment => 

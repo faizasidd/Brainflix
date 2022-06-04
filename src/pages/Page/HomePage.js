@@ -85,30 +85,3 @@ class HomePage extends Component {
     } 
 
 export default HomePage;
-
-// this.state = {videoPlayer: MainVideo[0],
-//     sideVideo:NextVideo};
-  
-//   }
-  
-//   clickHandler = (id) => {
-//     let newVideo = MainVideo.findIndex(main => main.id === id)
-//     this.setState({videoPlayer:{...MainVideo[newVideo]}})
-//   }
-
-// render() {
-// return (
-// <>
-// <VideoPlayer videoPlayer = {this.state.videoPlayer} />
-//   <div className='home__container'>
-//     <div className='home__left'>
-//       <VideoInfo videoPlayer = {this.state.videoPlayer}/>
-//        <Comments videoPlayer = {this.state.videoPlayer} /> 
-//        </div>
-//    <VideoList sideVideo = {this.state.sideVideo} clickHandler={this.clickHandler} id = {this.state.videoPlayer.id} />
-//   </div>
-// </>
-// );
-
-// }
-// }

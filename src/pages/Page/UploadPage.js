@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './UploadPage.scss';
 import Thumbnail from '../../assets/images/Upload-video-preview.jpg';
+import PublishIcon from '../../assets/images/Icons/publish.svg';
 
 class UploadPage extends Component {
   
@@ -33,7 +34,10 @@ class UploadPage extends Component {
             placeholder='Add a description to your video' />
         </form>
         <div className='upload__button-container'>
-          <button className='btn btn--publish'>Publish</button>
+          <button className='btn btn--publish'>
+          <img src={PublishIcon} alt='The publish icon' />
+          Publish
+          </button>
           <Link className='upload__cancel' to='/videos'>Cancel</Link>
         </div>
       </div>

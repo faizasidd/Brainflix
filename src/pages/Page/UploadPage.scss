@@ -7,33 +7,35 @@
     border-top: 1px solid $secondary-background;
     box-sizing: border-box;
     width: 100%;
-    padding: 1.5rem 1rem 2rem 1rem;
+    padding: 0rem 1rem 2rem 1rem;
   
     @include tablet {
-      padding: 3rem 1.5rem 2rem 1.5rem;
+      padding: 0.5rem 1.5rem 2rem 1.5rem;
     }
   
     @include desktop {
       @include flex($flex-wrap: wrap, $box-sizing: border-box);
-      padding: 3rem 3.75rem 2rem 3.75rem;
+      padding: 0.5rem 3.75rem 2rem 3.75rem;
     }
   
     &__title {
       @include font-styling(700, $primary-text);
-      @include format-text(2rem, 0 0 2rem 0, 1.5rem);
+      @include format-text(2rem, 0 0 1rem 0, 1.5rem);
       box-sizing: border-box;
+      border-top: 2px solid $divider-line;
+      padding-top: 1rem;
   
       @include tablet {
         @include format-text(2.5rem, 0 0 2.5rem 0, 2.25rem);
-        padding: 0 0 2rem 0;
-        border-bottom: 1px solid $divider-line;
+        padding: 2rem 0 2rem 0;
+        border-bottom: 2px solid $divider-line;
       }
   
       @include desktop {
         @include format-text(2.5rem, 0 0 2.5rem 0, 2.25rem);
         width: 100%;
-        padding: 0 0 2rem 0;
-        border-bottom: 1px solid $divider-line;
+        padding: 2rem 0 2rem 0;
+        border-bottom: 2px solid $divider-line;
       }
     }
   
@@ -47,7 +49,7 @@
   
     &__left {
       width: 100%;
-      margin: 0 0 2rem 0;
+      margin: 0 0 1rem 0;
   
       @include tablet {
         width: 21.5rem;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/logo/BrainFlix-logo.svg';
 import SearchIcon from '../../assets/images/Icons/search.svg';
@@ -14,20 +14,16 @@ class TitleBar extends Component {
     return (
       <div className='title-bar'>
 
-        {/* The Brainflix logo that redirects to the vidoes page */}
-        <Route render={({ brainflix }) => (
-          <div
-            className='title-bar__logo-container'
-            onClick={() => brainflix.push('/videos')}
-          >
+        {/* The Brainflix logo that links to the vidoes page */}
+        <Link to='/videos'>
+          <div className='title-bar__logo-container'>
             <img
               className='title-bar__logo'
               src={Logo}
               alt='The Brainflix Logo'
-
             />
           </div>
-        )} />
+        </Link>
 
         {/* The search bar container for the input and icon */}
         <div className='title-bar__search-container'>
