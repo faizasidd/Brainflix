@@ -1,29 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import CommentForm from '../CommentForm/CommentForm';
 import CommentItem from '../CommentItem/CommentItem';
 import './Comments.scss';
 
 // The container wrapping each CommentItem 
 
-const Comments = (props) => {
-    const comments = props.videoPlayer.comments
-    const count = comments.length
+class Comments extends Component {
 
-  return(
+  render() {
+
+    const {comments} = this.props;
+
+  return (
     <div className='comments'>
-    <h3 className='comments__count'>{count} Comments</h3>
+    <h3 className='comments__count'>{comments.length} Comments</h3>
     <CommentForm />
     {
-        props.videoPlayer.comments.map(comment => 
-        <CommentItem key={comment.name}
-        id = {comment.id}
-        name = {comment.name}
-        timestamp = {comment.timestamp}
-        comment = {comment.comment}
+        comments.map(comment => 
+        <CommentItem key={comment.id}
+       {...comment}
         />)
     }
     </div>
   )
+}
 }
 
 export default Comments;
