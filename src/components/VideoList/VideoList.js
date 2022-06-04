@@ -21,12 +21,3 @@ class VideoList extends Component {
 }
 
 export default VideoList;
-
-
-//   props.sideVideo.filter(video => video.id !== props.id).map(video =>
-//   <VideoListItem key={video.id}
-//   onClick={ () => {props.clickHandler(video.id)}}
-//   image = {video.image}
-//   title = {video.title}
-//   channel = {video.channel}
-//   />) 
