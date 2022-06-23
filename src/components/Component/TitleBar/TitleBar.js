@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../assets/images/logo/BrainFlix-logo.svg';
-import SearchIcon from '../../assets/images/Icons/search.svg';
-import UploadIcon from '../../assets/images/Icons/upload.svg';
+import Logo from '../../../assets/images/logo/BrainFlix-logo.svg';
+import SearchIcon from '../../../assets/images/Icons/search.svg';
+import UploadIcon from '../../../assets/images/Icons/upload.svg';
 import './TitleBar.scss';
 
 // The title bar at the top of the page

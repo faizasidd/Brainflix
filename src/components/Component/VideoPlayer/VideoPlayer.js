@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './VideoPlayer.scss';
-import PlayIcon from '../../assets/images/Icons/play.svg';
-import FullscreenIcon from '../../assets/images/Icons/fullscreen.svg';
-import VolumeUp from '../../assets/images/Icons/volume_up.svg';
+import PlayIcon from '../../../assets/images/Icons/play.svg';
+import FullscreenIcon from '../../../assets/images/Icons/fullscreen.svg';
+import VolumeUp from '../../../assets/images/Icons/volume_up.svg';
 
 // The player controls for the selected video
 

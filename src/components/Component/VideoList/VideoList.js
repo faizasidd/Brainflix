@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './VideoList.scss';
-import VideoListItem from '../VideoListItem/VideoListItem';
+import VideoListItem from '.././VideoListItem/VideoListItem';
 
 // The container for the list of suggested side videos
 

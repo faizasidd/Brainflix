@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './VideoInfo.scss';
-import LikesIcon from '../../assets/images/Icons/likes.svg';
-import ViewsIcon from '../../assets/images/Icons/views.svg';
+import LikesIcon from '../../../assets/images/Icons/likes.svg';
+import ViewsIcon from '../../../assets/images/Icons/views.svg';
 import date from '../Helper/Helper';
 
 // The info component displaying title, description, likes, etc for the selected video

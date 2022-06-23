@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  { BrowserRouter, Route, Switch } from 'react-router-dom';
-import TitleBar from './components/TitleBar/TitleBar';
+import TitleBar from './components/Component/TitleBar/TitleBar';
 import Mohan from './assets/images/Mohan-muruge.jpg';
 import './App.scss';
 import UploadPage from './pages/Page/UploadPage';

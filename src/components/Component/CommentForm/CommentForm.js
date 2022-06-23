@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CommentForm.scss';
-import Mohan from '../../assets/images/Mohan-muruge.jpg'
-import CommentIcon from '../../assets/images/Icons/add_comment.svg';
+import Mohan from '../../../assets/images/Mohan-muruge.jpg'
+import CommentIcon from '../../../assets/images/Icons/add_comment.svg';
 
 // The form for submitting comments
 

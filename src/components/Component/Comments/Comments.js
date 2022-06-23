@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CommentForm from '../CommentForm/CommentForm';
-import CommentItem from '../CommentItem/CommentItem';
+import CommentForm from '.././CommentForm/CommentForm';
+import CommentItem from '.././CommentItem/CommentItem';
 import './Comments.scss';
 
 // The container wrapping each CommentItem 
