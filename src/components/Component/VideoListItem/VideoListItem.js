@@ -18,7 +18,11 @@ class VideoListItem extends Component {
     <Link to={`/videos/${id}`} className='video-item'>
       <img
         className='video-item__img'
-        src={image}
+        src={image ?
+          (image.startsWith('https://')
+            ? image
+            : require('../../../assets/images/Upload-video-preview.jpg'))
+          : ''}
         alt='The video image' />
       <div className='video-item__right'>
         <h3 className='video-item__title'>{title}</h3>
