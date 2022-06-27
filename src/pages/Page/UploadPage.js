@@ -13,7 +13,7 @@ class UploadPage extends Component {
     event.preventDefault();
 
     axios.post(
-      '/videos',
+      'http://localhost:8080/videos',
       {
         title: this.formRef.current.title.value,
         channel: 'Mohan Muruge',

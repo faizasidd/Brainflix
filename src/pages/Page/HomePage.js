@@ -17,7 +17,7 @@ class HomePage extends Component {
   fetchSelectedVideo = () => {
     const id = this.props.match.params.id || this.state.videos[0].id;
 
-    axios.get(`/videos/${id}`)
+    axios.get(`http://localhost:8080/videos/${id}`)
       .then(response => {
         this.setState(prevState => ({
           ...prevState,
@@ -32,13 +32,13 @@ class HomePage extends Component {
 
 
   componentDidMount() {
-    axios.get(`/videos`)
+    axios.get(`http://localhost:8080/videos`)
     .then(response => {
       // If we have an id from url, use it. Otherwise, default to first in response array
       const id  = this.props.match.params.id || response.data[0].id;
 
       // Chaining these two requests together prevents one extra render by setting state once
-      axios.get(`/videos/${id}`)
+      axios.get(`http://localhost:8080/videos/${id}`)
       .then(response2 => {
         this.setState({
           videos: response.data,
